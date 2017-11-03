@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11129.15" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Minhas_anotacoes_Aula" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fundo" translatesAutoresizingMaskIntoConstraints="NO" id="V5E-CR-omz"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AuS-YE-8bP">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="RNB-2o-xlP"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UDL-3U-W3d">
+                                        <color key="backgroundColor" red="0.99215686274509807" green="0.98431372549019602" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGd-FW-UL5">
+                                        <state key="normal" backgroundImage="botao_salvar"/>
+                                        <connections>
+                                            <action selector="salvarAnotacao:" destination="BYZ-38-t0r" eventType="touchUpInside" id="awL-g7-qXb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="V5E-CR-omz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5q5-64-KwJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AuS-YE-8bP" secondAttribute="bottom" constant="235" id="67l-7y-jvG"/>
+                            <constraint firstItem="AuS-YE-8bP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11" id="9Wv-yc-9pG"/>
+                            <constraint firstItem="AuS-YE-8bP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Gzr-lJ-7JO"/>
+                            <constraint firstItem="AuS-YE-8bP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ql5-Ew-SoX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="V5E-CR-omz" secondAttribute="bottom" id="VHR-0X-kLH"/>
+                            <constraint firstAttribute="trailing" secondItem="V5E-CR-omz" secondAttribute="trailing" id="eVp-ch-cjv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AuS-YE-8bP" secondAttribute="trailing" constant="11" id="gi1-Xh-Xq0"/>
+                            <constraint firstItem="V5E-CR-omz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tNK-oK-APP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textoTextView" destination="UDL-3U-W3d" id="CBr-NI-99a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-98.400000000000006" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="botao_salvar" width="321" height="38"/>
+        <image name="fundo" width="768" height="462"/>
+        <image name="logo" width="321" height="67"/>
+    </resources>
+</document>
